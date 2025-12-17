@@ -44,11 +44,17 @@ def personalized_output(user_data):
 
     return final_msg
 
-user_data = {}
-user_inp =  ['Name' , 'Age' , 'City' , 'Profession' , 'Hobby']
 
-for inp in user_inp :
-    user_input = input(f"Enter your {inp}:").strip()
-    user_data[inp] = user_input
+def main():
+    user_data = {}
+    user_inp =  ['Name' , 'Age' , 'City' , 'Profession' , 'Hobby']
 
-print(personalized_output(user_data))
+    for inp in user_inp :
+        user_input = input(f"Enter your {inp}:").strip()
+        user_data[inp] = user_input
+
+    print(personalized_output(user_data))
+
+
+if __name__ == "__main__" :
+    main()
