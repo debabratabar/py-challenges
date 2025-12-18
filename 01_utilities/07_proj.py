@@ -69,14 +69,6 @@ def view_tasks(tasks):
 
 
 
-
-
-
-
-
-
-
-
 def task_manager():
 
     task_file = 'tasks.txt'
@@ -90,6 +82,7 @@ def task_manager():
 
         match choice:
 
+
             case "1" : #Add Task  
                 task_item = input("Please Type your tasks: ").strip()
 
@@ -100,8 +93,13 @@ def task_manager():
                 else:
                     print('Empty Task is Invalid')
 
+
+
             case "2" :  # view_tasks 
                 view_tasks(tasks)
+
+
+
 
             case "3" : # marks task completed 
                 view_tasks(tasks)
@@ -117,6 +115,9 @@ def task_manager():
                 except ValueError:
                     print('Please enter  Valid  Input')
 
+
+
+
             case "4" : # delete task 
                 view_tasks(tasks)
                 try:
@@ -130,28 +131,21 @@ def task_manager():
                 except  ValueError:
                     print('Please enter  Valid  Input')              
 
+
+
             case "5" :
                 print(f"Exiting from Task List Manager !!!! Welcome back ")
                 break
 
 
+
+
             case _:
                 print("!!!!!!!!!!!!Please Select your option properly !!!!!!!!!!")
-
-
-                
-
-
-
-
-
 
 def main():
 
     task_manager()
-
-
-
 
 
 if __name__ == '__main__':
