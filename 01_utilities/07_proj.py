@@ -43,15 +43,20 @@ def load_task(task_file):
     if os.path.exists(task_file):
 
         with open(task_file , 'r' , encoding='utf-8') as f :
+            prev = None 
             for line in f:
-                task , status = line.strip().rsplit('||' , 1)
-                tasks.append({'task' : task , 'status' : status == 'done'})
+                if prev is not None:
+                    task , status = line.strip().rsplit('||' , 1)
+                    tasks.append({'task' : task , 'status' : status == 'done'})
+                prev = line
 
     return tasks
 
 
 def add_tasks(tasks , task_file):
     with open(task_file , 'w' , encoding='utf-8') as f :
+            curr_time = datetime.now().strftime('%Y-%m-%d - %I:%M %p')
+            f.write(f"{curr_time}\n")
             for line in tasks:
                 task , status = line['task'] , 'done' if line['status'] else 'not_done'
                 f.write(f"{task}||{status}\n")
@@ -122,7 +127,7 @@ def task_manager():
                 view_tasks(tasks)
                 try:
                     task_no = int(input("Pleas give your input to delete task: "))
-                    if 1 >= task_no <= len(tasks) :
+                    if 1 <= task_no <= len(tasks) :
                         tasks.pop(task_no-1)
                         add_tasks(tasks,task_file)
                         print('Asked Task is Removed')
