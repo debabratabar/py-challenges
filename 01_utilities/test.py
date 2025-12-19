@@ -9,3 +9,5 @@ print(curr_time)
 print(string.punctuation)
 
 print(string.ascii_letters)
+
+print(chr(122))
