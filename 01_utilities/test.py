@@ -1,21 +1,45 @@
 
 from datetime import datetime
 import string
+import csv ,os 
 
-curr_time = datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
 
-print(curr_time)
+data = ['Deb',999,'gmail']
+header = ['Name','ph','email']
 
-print(string.punctuation)
+file_name  = 'contact.csv'
 
-print(string.ascii_letters)
+# if os.path.exists(file_name):
+#     with open(file=file_name, mode='a' , encoding='utf-8') as f :
 
-print(chr(122))
+#         csvwriter = csv.writer(f)     
+#         # csvwriter.writerow(header)
+#         csvwriter.writerow(data)
+# else:
+#     with open(file=file_name, mode='a' , encoding='utf-8') as f :
 
-name1 = "debabrata"
-name2 = 'bar'
+#         csvwriter = csv.writer(f)     
+#         csvwriter.writerow(header)
+#         csvwriter.writerow(data)
 
-shared_characters = set(name1) & set(name2) 
-    
-print(shared_characters)
-print(set('aeiou'))
+
+# with open(file=file_name, mode='r' , encoding='utf-8') as f :
+#     csv_obj = csv.DictReader(f)
+#     csv_writerf = csv.DictWriter(f)
+
+#     for i in csv_obj:
+#         print(i)
+
+
+dict = {'name': 'de', 'email': 'e', 'ph_no': 'ph_deno'}
+
+print(list(dict.keys()))
+print(dict.values())
+
+
+obj = 'deb'
+
+if obj:
+    print("heyy")
+else:
+    print("NOO")
