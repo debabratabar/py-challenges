@@ -1,0 +1,37 @@
+[
+    {
+        "id" : 201,
+        "name" : "Debabrata", 
+        "email" :  "deb@g.com",
+        "location" :"Delhi",
+        "is_active" : true
+    },
+    {
+         "id" : 201,
+        "name" : "Debabrata", 
+        "email" :  "deb@g.com",
+        "location" :"Delhi",
+        "is_active" : true
+    },
+    {
+         "id" : 201,
+        "name" : "Debabrata", 
+        "email" :  "deb@g.com",
+        "location" :"Delhi",
+        "is_active" : true
+    },
+    {
+         "id" : 201,
+        "name" : "Debabrata", 
+        "email" :  "deb@g.com",
+        "location" :"Delhi",
+        "is_active" : true
+    },
+    {
+         "id" : 201,
+        "name" : "Debabrata", 
+        "email" :  "deb@g.com",
+        "location" :"Delhi",
+        "is_active" : true
+    }
+]
