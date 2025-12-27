@@ -1,27 +1,17 @@
 import requests
 from datetime import datetime
 from pprint import pprint 
-import csv 
-
-city = 'Delhi'
-api_key = ''
-
-api_link = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
+import csv , base64
 
 
-req = requests.get(api_link)
 
-# print(req.json()['weather'][0]['main'])
-# print(req.json()['main']['temp'])
+str1 = 'debabrata'
 
+dcode_vali = str1.encode()
 
-# curr_date = datetime.date().
-
-# print(curr_date)
+print(dcode_vali)
+print(type(dcode_vali))
 
 
-with open(file='weather_log.csv' , mode='r' , encoding='utf-8') as f :
-            csvreader = list(csv.DictReader(f))
-            pprint(csvreader)
-           
+print(base64.b64encode(dcode_vali))
 
