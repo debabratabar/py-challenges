@@ -41,6 +41,24 @@ def passworkChecker(password):
     return ['Weak' , 'Moderate' , 'Strong'][min(sum , 2)]
 
 
+def search_entry(web , user ):
+
+    if not os.path.exists(Filename):
+        print("No file found")
+        return False
+
+
+    with open(file=Filename , mode='r' , encoding='utf-8') as f:
+        for line in f : 
+            decodded_str = decode(line)
+            website , user_name , password = decodded_str.split('||')
+            if website == web and  user == user_name:
+                return True 
+            
+
+        
+    return False 
+
 
 def add_credentials():
     website = input("Please write your website= ").strip().lower()
@@ -48,14 +66,19 @@ def add_credentials():
     password = getpass.getpass("Please write your password =").strip().lower()
     # password = input("Please write your password =").strip().lower()
 
-    actual_url = f"{website}||{user_name}||{password}"
 
-    encoded_str = encode(actual_url)
+    if not search_entry(website , user_name):
 
-    with open(file=Filename , mode='a' , encoding='utf-8',newline="\n") as f:
-        f.write(encoded_str +"\n")
+        actual_url = f"{website}||{user_name}||{password}"
+        encoded_str = encode(actual_url)
 
-    print(" Encoded string added" )
+        with open(file=Filename , mode='a' , encoding='utf-8',newline="\n") as f:
+            f.write(encoded_str +"\n")
+
+        print(" Encoded string added" )
+
+    else:
+        print("website and username already exists ")
 
 
 
@@ -96,7 +119,7 @@ def update_credentials():
     tmp_file = 'tmp.txt'
     updated = False
 
-    with open(file=Filename , mode='r' , encoding='utf-8') as readfile ,  open(file=tmp_file , mode='w' , encoding='utf-8') as writefile:
+    with open(file=Filename , mode='r' , encoding='utf-8') as readfile ,  open(file=tmp_file , mode='w' , encoding='utf-8',newline='\n') as writefile:
 
         for line in readfile : 
             decodded_str = decode(line)
@@ -115,6 +138,8 @@ def update_credentials():
                 
 
     os.replace(tmp_file , Filename)
+
+
     if updated:
         print(" Password updated")
     else:
