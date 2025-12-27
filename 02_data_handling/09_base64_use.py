@@ -114,8 +114,8 @@ def update_credentials():
                 writefile.write(line)
                 
 
+    os.replace(tmp_file , Filename)
     if updated:
-        os.replace(tmp_file , Filename)
         print(" Password updated")
     else:
         print("Either user_name or website not found ")
