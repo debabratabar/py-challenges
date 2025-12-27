@@ -1,1 +1,37 @@
-[{"id": "201", "name": "Debabrata", "email": "deb@g.com", "location": "Delhi", "is_active": "True"}, {"id": "201", "name": "Debabrata", "email": "deb@g.com", "location": "Delhi", "is_active": "True"}, {"id": "201", "name": "Debabrata", "email": "deb@g.com", "location": "Delhi", "is_active": "True"}, {"id": "201", "name": "Debabrata", "email": "deb@g.com", "location": "Delhi", "is_active": "True"}, {"id": "201", "name": "Debabrata", "email": "deb@g.com", "location": "Delhi", "is_active": "True"}]
+[
+  {
+    "id": "201",
+    "name": "Debabrata",
+    "email": "deb@g.com",
+    "location": "Delhi",
+    "is_active": "True"
+  },
+  {
+    "id": "201",
+    "name": "Debabrata",
+    "email": "deb@g.com",
+    "location": "Delhi",
+    "is_active": "True"
+  },
+  {
+    "id": "201",
+    "name": "Debabrata",
+    "email": "deb@g.com",
+    "location": "Delhi",
+    "is_active": "True"
+  },
+  {
+    "id": "201",
+    "name": "Debabrata",
+    "email": "deb@g.com",
+    "location": "Delhi",
+    "is_active": "True"
+  },
+  {
+    "id": "201",
+    "name": "Debabrata",
+    "email": "deb@g.com",
+    "location": "Delhi",
+    "is_active": "True"
+  }
+]

@@ -35,7 +35,7 @@ def convert_to_json(csv_data,out_fileName):
         # header = list( csv_data[0].keys())
 
         with open(out_fileName , mode='w' , encoding='utf-8') as f :
-            json.dump(csv_data , f )
+            json.dump(csv_data , f ,indent=2)
 
     else:
         print("Data couldn't be converted to json")
