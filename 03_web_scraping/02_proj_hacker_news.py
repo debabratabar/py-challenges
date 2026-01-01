@@ -53,7 +53,6 @@ def write_to_csv(csv_data, csv_file):
         print("No Data , GO back Simon ")
 
 
-
     with open(file=csv_file , mode="w" , encoding="utf-8" , newline='') as f :
         csvwriter = csv.DictWriter(f, fieldnames=["Id" , "Title" , "URL" ] )
 
