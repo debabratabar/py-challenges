@@ -4,9 +4,6 @@ import os
 
 load_dotenv()
 
-# GEMINI_API_KEY="AIzaSyC6Dl-owcFaHhReKMhjqUzrjLvSju5PErI"
-
-
 client = genai.Client( api_key=os.getenv("GEMINI_API_KEY"))
 
 
