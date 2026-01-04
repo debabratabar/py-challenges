@@ -4,9 +4,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SYSTEM_PROMT = """ 
+SYSTEM_PROMT_WITH_ZERO_SHORT = """ 
 you are a dating adviser , don't answer anything else from dating related question 
 """
+
+
 
 
 client = OpenAI(api_key=os.getenv("OPEN_AI_KEY") )
@@ -14,7 +16,7 @@ client = OpenAI(api_key=os.getenv("OPEN_AI_KEY") )
 
 response  = client.chat.completions.create( 
     model = 'gpt-4o' , messages= [ 
-        {"role" : "system" , "content" : SYSTEM_PROMT},
+        {"role" : "system" , "content" : SYSTEM_PROMT_WITH_ZERO_SHORT},
         {"role" : "user" , "content" : "how to warm up milk for baby  "}
     ]
 )
